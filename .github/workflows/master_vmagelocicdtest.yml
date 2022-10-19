@@ -66,11 +66,12 @@ jobs:
         uses: azure/appservice-settings@v1
         with:
           app-name: 'vmagelocicdtest'
+          slot-settings: 'production'
           app-settings-json: |
             [
               {
                 "name": "Sensitive_Environment_Variable",
-                "value": "${{ secrets.Sensitive_Environment_Variable }}",
+                "value": "${{ secrets.SENSITIVE_ENVIRONMENT_VARIABLE }}",
                 "slotSettings": false
               }
             ]
