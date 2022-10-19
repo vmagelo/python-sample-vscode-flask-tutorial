@@ -67,10 +67,10 @@ jobs:
         with:
           app-name: 'vmagelocicdtest'
           app-settings-json: |
-          [
-            {
-              "name": "Sensitive_Environment_Variable",
-              "value": "${{ secrets.Sensitive_Environment_Variable }}",
-              "slotSettings": false
-            }
-          ]
+            [
+              {
+                "name": "Sensitive_Environment_Variable",
+                "value": "${{ secrets.Sensitive_Environment_Variable }}",
+                "slotSettings": false
+              }
+            ]
