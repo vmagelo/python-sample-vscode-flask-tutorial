@@ -64,7 +64,8 @@ jobs:
 
       - name: 'Set web app app settting'
         uses: azure/appservice-settings@v1
+        id: settings
         with:
           app-name: 'vmagelocicdtest'
-          slot-name: 'production'
+          slot-name: 'Production'
           app-settings-json: '[{ "name": "Sensitive_Environment_Variable", "value": "${{ secrets.SENSITIVE_ENVIRONMENT_VARIABLE }}", "slotSettings": false }]'
