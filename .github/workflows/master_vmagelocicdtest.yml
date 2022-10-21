@@ -62,7 +62,7 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_73B482C878B6456C8126954FAC1DE0F7 }}
 
-      - name: 'Set web app app settting'
+      - name: 'Set web app app setting'
         uses: azure/appservice-settings@v1
         id: settings
         with:
