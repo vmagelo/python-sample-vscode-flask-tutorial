@@ -61,3 +61,11 @@ jobs:
           app-name: 'vmagelocicdtest'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5831EFCD48BD48D6BB9B7FDC2FA0C915 }}
+
+      - name: 'Set web app app setting'
+          uses: azure/appservice-settings@v1
+          id: settings
+          with:
+            app-name: 'vmagelocicdtest'
+            slot-name: 'Production'
+            app-settings-json: '[{ "name": "Sensitive_Environment_Variable", "value": "${{ secrets.SENSITIVE_ENVIRONMENT_VARIABLE }}", "slotSettings": false }]'
